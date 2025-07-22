@@ -14,13 +14,13 @@ app.use(express.json());
 app.use(cors()); // Enable CORS for all routes
 
 // routes
-app.post("/runcode", runCode);
-app.post("/register", register);
-app.post("/login", login);
-app.get("/validate", validate);
-app.post("/subscribe", subscribe);
-app.post("/auth/google", googleAuth);
-app.get("/ping", (req, res) => res.send("hello"));
+app.post("/api/runcode", runCode);
+app.post("/api/register", register);
+app.post("/api/login", login);
+app.get("/api/validate", validate);
+app.post("/api/subscribe", subscribe);
+app.post("/api/auth/google", googleAuth);
+app.get("/api/ping", (req, res) => res.send("hello"));
 
 // connect to DB and start server
 connectDB().then(() => {
